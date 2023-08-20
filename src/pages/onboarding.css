@@ -1,0 +1,227 @@
+.svg-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.path1, .path2, .path3 {
+    fill: white;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+  
+.path1 {
+    animation: animatePath1 1.5s ease;
+}
+
+.path2 {
+    animation: animatePath2 1s ease;
+}
+
+.path3 {
+    animation: animatePath3 1.5s ease;
+}
+  
+@keyframes animatePath1 {
+    0% {
+      transform: translateX(50%) translateY(-50%);
+      opacity: 0;
+    }
+    30%{
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%) translateY(0%);
+      opacity: 100%;
+    }
+}
+  
+@keyframes animatePath2 {
+    0% {
+      transform: translateX(-50%) translateY(50%);
+      opacity: 0;
+    }
+    30%{
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%) translateY(0%);
+      opacity: 100%;
+    }
+}
+  
+@keyframes animatePath3 {
+    0% {
+      transform: translateX(50%) translateY(-50%);
+      opacity: 0;
+    }
+    30%{
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%) translateY(0%);
+      opacity: 100%;
+    }
+}
+  
+.onboarding{
+    min-width: 325px;
+    max-width: 1194px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@keyframes slideInFromUp {
+    0% {
+      transform: translateY(-50%);
+      opacity: 0%;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 100%;
+    }
+}
+
+.onboarding-title{
+    color: #FFF;
+    font-family: Neue Haas Grotesk Display Pro;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin: 50px 0 0 0;
+    animation: slideInFromUp;
+    animation-duration: 1s;
+}
+
+.onboarding-photos-and-texts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    margin: 0 auto;
+}
+
+.onboarding-part-1, .onboarding-part-2{
+    max-width: 582px;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-50%);
+      opacity: 0%;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 100%;
+    }
+}
+
+.onboarding-img-1,
+.onboarding-img-2 {
+  max-width: 100%;
+  height: auto;
+  margin-top: 50px;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-name: slideInFromLeft
+}
+
+.onboarding-img-2 {
+  animation-delay: 1.25s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideInFromDown {
+    0% {
+      transform: translateY(50%);
+      opacity: 0%;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 100%;
+    }
+}
+
+.onboarding-text-1, .onboarding-text-2{
+    color: #9F9F9F;
+    font-family: Neue Haas Grotesk Display Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 100%;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-name:slideInFromDown;
+}
+
+.onboarding-text-1{
+    animation-delay: 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.onboarding-text-2{
+    animation-delay: 1.75s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInFromDown2 {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+}
+
+.onboarding-button{
+    margin: 50px 0px 0px 0px;
+    border-radius: 20px;
+    background: var(--white, #FFF);
+    display: flex;
+    max-width: 233px;
+    padding: 0 60px 0 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    animation: slideInFromDown2 1s;
+    animation-delay: 2.75s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.onboarding-button:hover{
+    background-color: #000;
+    border: 1px ridge white;
+    .onboarding-button-text{
+        color: white;
+    }
+}
+
+.onboarding-button-text{
+    color: var(--black, #000);
+    text-align: center;
+    font-family: Neue Haas Grotesk Display Pro;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    transition: all 0.1s;
+}
+
+@media (max-width: 1250px) {
+    .onboarding-photos-and-texts{
+        grid-template-columns: 1fr;
+    }
+}
